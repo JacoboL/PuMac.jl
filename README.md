@@ -16,12 +16,13 @@ Es necesario tener los paquetes
 using Pkg
 Pkg.add(url = "https://github.com/JacoboL/PuMac.jl")
 ```
-### Funciones 
+### Función
 
-
+Para usar el paquete
 ```julia
 using PuMac
 ```
+
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool)
 ```
@@ -61,7 +62,7 @@ Entonces si usamos la función
 ```julia
 Nuevo_DF = unir(["Archivo_1.csv", "Archivo_2.csv"], ["A", "C"], "NuevoCSV.csv")
 ```
-La función regresa un DataFrame y nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información
+La función regresa un DataFrame y tambien crea un nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información 
 ```julia
 6×3 DataFrame
  Row │ A        C   

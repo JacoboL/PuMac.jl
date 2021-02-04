@@ -4,7 +4,7 @@ Paquete de julia de de apoyo para el uso de archivos csv
 
 ### Pre-requisitos 
 
-Es necesario tener paquetes 
+Es necesario tener los paquetes 
 `CSV`
 `DataFrames`
 `JLD`
@@ -16,13 +16,12 @@ Es necesario tener paquetes
 using Pkg
 Pkg.add(url = "https://github.com/JacoboL/PuMac.jl")
 ```
+### Funciones 
+
 
 ```julia
 using PuMac
 ```
-
-### Implementación 
-
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool)
 ```
@@ -31,7 +30,7 @@ unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool)
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
 ### Ejemplo 
-Supongamos que tenemos dos archivos csv, si el primero contiene el siguiente DataFrame
+Supongamos que tenemos dos archivos csv, que contengan DataFrames
 
 `Archivo_1.csv`
 ```julia
@@ -44,8 +43,6 @@ Supongamos que tenemos dos archivos csv, si el primero contiene el siguiente Dat
    3 │ 3        F      
    4 │ 4        M      
 ```
-Y el segundo archivo contiene este otro DataFrame
-
 `Archivo_2.csv`
 ```julia   
 6×2 DataFrame
@@ -60,7 +57,7 @@ Y el segundo archivo contiene este otro DataFrame
    6 │ 13       U
 ```
 
-Entonces usamos la función
+Entonces si usamos la función
 ```julia
 Nuevo_DF = unir(["Archivo_1.csv", "Archivo_2.csv"], ["A", "C"], "NuevoCSV.csv")
 ```

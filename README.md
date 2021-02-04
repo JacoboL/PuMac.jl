@@ -23,15 +23,28 @@ Para usar el paquete
 using PuMac
 ```
 #### Unir()
+
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
-Une las `columnas` de los `archivos`
+Une las `columnas` deseadas de los `archivos`
+
+```julia
+unir(archivos::Array, columnas::Array, nombre_archivo::String)
+```
+Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
+
+```julia
+unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool = false)
+```
+Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
+los valores extra del archivo resultante seran ceros
 
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
->### Ejemplo 
+
+### Ejemplo 
 >Supongamos que tenemos dos archivos csv, que contengan DataFrames
 >
 >`Archivo_1.csv`

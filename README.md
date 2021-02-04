@@ -45,7 +45,7 @@ unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool =
    3 │ 3        F      
    4 │ 4        M      
 ```
-`Archivo_2.csv`
+>`Archivo_2.csv`
 ```julia   
 6×2 DataFrame
  Row │ C        D      
@@ -58,12 +58,12 @@ unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool =
    5 │ 8        V
    6 │ 13       U
 ```
-
-Entonces si usamos la función
+>
+>Entonces si usamos la función
 ```julia
 Nuevo_DF = unir(["Archivo_1.csv", "Archivo_2.csv"], ["A", "C"], "NuevoCSV.csv")
 ```
-La función regresa un DataFrame y tambien crea un nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información 
+>La función regresa un DataFrame y tambien crea un nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información 
 ```julia
 6×3 DataFrame
  Row │ A        C   
@@ -76,6 +76,7 @@ La función regresa un DataFrame y tambien crea un nuevo archivo de nombre Nuevo
    5 │ missing  8
    6 │ missing  13    
 ```
+>
 ### Licencia 
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalle

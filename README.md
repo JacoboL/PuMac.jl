@@ -27,34 +27,34 @@ using PuMac
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
-Une las `columnas` deseadas de los `archivos`.
+>Une las `columnas` deseadas de los `archivos`.
 
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String)
 ```
-Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`.
+>Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`.
 
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool = false)
 ```
-Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
-los valores `faltantes` del archivo resultante seran ceros.
+>Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
+>los valores `faltantes` del archivo resultante seran ceros.
 
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
-Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
- y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
+>Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
+> y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
 
 ### Ejemplo 
->Supongamos que tenemos dos archivos csv, que contengan DataFrames
->
+Supongamos que tenemos dos archivos csv, que contengan DataFrames
+
 >`Archivo_1.csv`
 ```julia
-4×2 DataFrame
- Row │ A        B      
-     │ Float    String    
-─────┼─────────────────
+>4×2 DataFrame
+> Row │ A        B      
+>     │ Float    String    
+>─────┼─────────────────
    1 │ 1        M      
    2 │ 2        F      
    3 │ 3        F      
@@ -73,12 +73,12 @@ Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archi
    5 │ 8        V
    6 │ 13       U
 ```
->
->Entonces si usamos la función
+
+Entonces si usamos la función
 ```julia
 Nuevo_DF = unir(["Archivo_1.csv", "Archivo_2.csv"], ["A", "C"], "NuevoCSV.csv")
 ```
->La función regresa un DataFrame y tambien crea un nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información 
+La función regresa un DataFrame y tambien crea un nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información 
 ```julia
 6×3 DataFrame
  Row │ A        C   
@@ -91,7 +91,7 @@ Nuevo_DF = unir(["Archivo_1.csv", "Archivo_2.csv"], ["A", "C"], "NuevoCSV.csv")
    5 │ missing  8
    6 │ missing  13    
 ```
->
+
 ### Licencia 
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalle

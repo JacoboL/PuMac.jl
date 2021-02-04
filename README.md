@@ -105,4 +105,4 @@ La función regresa un DataFrame y tambien crea un nuevo archivo de nombre Nuevo
 
 ### Licencia 
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalle
+Este proyecto está bajo la Licencia MIT

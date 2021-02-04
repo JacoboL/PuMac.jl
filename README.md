@@ -46,9 +46,9 @@ unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool =
 Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
 y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
 >
->##Parametros obligatorios:
->`archivos` -> Arreglo de Strings que contiene el nombre o la ubicación de los archivos
->`columnas` -> Arreglo de Strings que contiene el nombre de las columnas deseadas
+>## Parametros obligatorios:
+>`archivos` -> Arreglo de Strings que contiene el nombre o la ubicación de los archivos.
+>`columnas` -> Arreglo de Strings que contiene el nombre de las columnas deseadas.
 
 ## Ejemplo 
 Supongamos que tenemos dos archivos csv, que contengan DataFrames

@@ -49,11 +49,11 @@ Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archi
 y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
 <br><br>
 
->## Parametros obligatorios:
+>## Parametros:
 >`archivos` -> Arreglo de Strings que contiene el nombre o la ubicación de los archivos para importar.<br>
 >`carpeta` -> String que contiene la ubicación de una carpeta con los archivos para importar.<br>
 >`columnas` -> Arreglo de Strings que contiene el nombre de las columnas deseadas.<br>
->## Parametros opcionales:
+>### Parametros opcionales:
 >`nombre_archivo` -> String que contiene el nombre y/o la ubicación para el archivo exportado.<br>
 >`faltantes` -> Bool, si es true llenara los valores faltantes con variables missing de tipo Missing, si es false llenara los valores faltantes con ceros.<br>
 

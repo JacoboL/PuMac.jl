@@ -24,18 +24,18 @@ using PuMac
 ### Implementación 
 
 ```julia
-unir(archivos::Array, columnas::Array, nombre_archivo::String = "new_PuMAC.csv", faltantes = true)
+unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool)
 ```
 
 ```julia
-unir(carpeta::String, columnas::Array, nombre_archivo::String = "new_PuMAC.csv", faltantes::Bool = true)
+unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
 ### Ejemplo 
 Supongamos que tenemos dos archivos csv, si el primero contiene el siguiente DataFrame
 ```julia
 4×2 DataFrame
  Row │ A        B      
-     │ Any      String    
+     │ Float    String    
 ─────┼─────────────────
    1 │ 1        M      
    2 │ 2        F      
@@ -46,7 +46,7 @@ Y el segundo archivo contiene este otro DataFrame
 ```julia   
 6×2 DataFrame
  Row │ C        D      
-     │ Any      String    
+     │ Int      String    
 ─────┼─────────────────
    1 │ 1        Z      
    2 │ 2        Y      
@@ -58,12 +58,9 @@ Y el segundo archivo contiene este otro DataFrame
 
 Entonces usamos la función
 ```julia
-archivos = ["Archivo_1.csv", "Archivo_2.csv"]
-columnas_deseadas = ["A", "C"]
-nombre_del_archivo = "NuevoCSV.csv"
-Nuevo_DF = unir(archivos, columnas_deseadas, nombre_del_archivo)
+Nuevo_DF = unir(["Archivo_1.csv", "Archivo_2.csv"], ["A", "C"], "NuevoCSV.csv")
 ```
-El resultado sera un archivo de nombre NuevoCSV.csv que contiene la siguiente información
+La función regresa un DataFrame y nuevo archivo de nombre NuevoCSV.csv que contiene la siguiente información
 ```julia
 6×3 DataFrame
  Row │ A        C   

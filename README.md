@@ -28,32 +28,32 @@ using PuMac
 unir(archivos::Array, columnas::Array)
 ```
 Une las `columnas` deseadas de los `archivos`.
-
+<br>
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String)
 ```
 Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`.
-
+<br>
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool = false)
 ```
 Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
 los valores `faltantes` del archivo resultante seran ceros.
-
+<br>
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
 Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
 y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
-
+<br><br>
 
 >## Parametros obligatorios:
->`archivos` -> Arreglo de Strings que contiene el nombre o la ubicación de los archivos para importar.
->`carpeta` -> String que contiene la ubicación de una carpeta con los archivos para importar.
->`columnas` -> Arreglo de Strings que contiene el nombre de las columnas deseadas.
+>`archivos` -> Arreglo de Strings que contiene el nombre o la ubicación de los archivos para importar.<br>
+>`carpeta` -> String que contiene la ubicación de una carpeta con los archivos para importar.<br>
+>`columnas` -> Arreglo de Strings que contiene el nombre de las columnas deseadas.<br>
 >## Parametros opcionales:
->`nombre_archivo` -> String que contiene el nombre y/o la ubicación para el archivo exportado.
->`faltantes` -> Bool, si es true llenara los valores faltantes con variables missing de tipo Missing, si es false llenara los valores faltantes con ceros.
+>`nombre_archivo` -> String que contiene el nombre y/o la ubicación para el archivo exportado.<br>
+>`faltantes` -> Bool, si es true llenara los valores faltantes con variables missing de tipo Missing, si es false llenara los valores faltantes con ceros.<br>
 
 ## Ejemplo 
 Supongamos que tenemos dos archivos csv, que contengan DataFrames

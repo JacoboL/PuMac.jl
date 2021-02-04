@@ -1,6 +1,6 @@
 # PuMAC
 
-Paquete de julia de de apoyo para el uso de archivos csv
+Paquete de julia de de apoyo para la manipulación de Dataframes en archivos de tipo csv
 
 ### Pre-requisitos 
 
@@ -51,10 +51,10 @@ Supongamos que tenemos dos archivos csv, que contengan DataFrames
 
 >`Archivo_1.csv`
 ```julia
->4×2 DataFrame
-> Row │ A        B      
->     │ Float    String    
->─────┼─────────────────
+4×2 DataFrame
+ Row │ A        B      
+     │ Float    String    
+─────┼─────────────────
    1 │ 1        M      
    2 │ 2        F      
    3 │ 3        F      

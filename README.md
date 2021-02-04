@@ -2,7 +2,7 @@
 
 Paquete de julia de de apoyo para la manipulación de Dataframes en archivos de tipo csv
 
-### Pre-requisitos 
+## Pre-requisitos 
 
 Es necesario tener los paquetes 
 `CSV`
@@ -10,43 +10,47 @@ Es necesario tener los paquetes
 `JLD`
 `FileIO`
 
-### Instalación 
+## Instalación 
 
 ```julia
 using Pkg
 Pkg.add(url = "https://github.com/JacoboL/PuMac.jl")
 ```
-### Función
+## Función
 
 Para usar el paquete
 ```julia
 using PuMac
 ```
-#### Unir()
+### Unir()
 
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
->Une las `columnas` deseadas de los `archivos`.
+Une las `columnas` deseadas de los `archivos`.
 
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String)
 ```
->Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`.
+Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`.
 
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool = false)
 ```
->Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
->los valores `faltantes` del archivo resultante seran ceros.
+Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
+los valores `faltantes` del archivo resultante seran ceros.
 
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
->Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
-> y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
+Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
+y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
+>
+>##Parametros obligatorios:
+>`archivos` -> Arreglo de Strings que contiene el nombre o la ubicación de los archivos
+>`columnas` -> Arreglo de Strings que contiene el nombre de las columnas deseadas
 
-### Ejemplo 
+## Ejemplo 
 Supongamos que tenemos dos archivos csv, que contengan DataFrames
 
 >`Archivo_1.csv`

@@ -22,9 +22,9 @@ Para usar el paquete
 ```julia
 using PuMac
 ```
-
+#### Unir()
 ```julia
-unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool)
+unir(archivos::Array{String,1}, columnas::Array{String,1})
 ```
 
 ```julia

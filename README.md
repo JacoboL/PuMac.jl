@@ -1,10 +1,10 @@
 # PuMAC
 
-## Paquete julia para la extracción de archivos csv
+Paquete de julia de de apoyo para el uso de archivos csv
 
 ### Pre-requisitos 
 
-Tener los paquetes 
+Es necesario tener paquetes 
 `CSV`
 `DataFrames`
 `JLD`

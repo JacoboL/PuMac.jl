@@ -27,22 +27,24 @@ using PuMac
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
-Une las `columnas` deseadas de los `archivos`
+Une las `columnas` deseadas de los `archivos`.
 
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String)
 ```
-Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
+Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`.
 
 ```julia
 unir(archivos::Array, columnas::Array, nombre_archivo::String, faltantes::Bool = false)
 ```
 Une las `columnas` deseadas de los `archivos` y el archivo es exportado a `nombre_archivo`
-los valores extra del archivo resultante seran ceros
+los valores `faltantes` del archivo resultante seran ceros.
 
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
+Une las `columnas` deseadas de los archivos csv que esten en `carpeta`, el archivo sera exportado a `nombre_archivo`
+ y los valores `faltantes` del archivo resultante seran missing de tipo Missing.
 
 ### Ejemplo 
 >Supongamos que tenemos dos archivos csv, que contengan DataFrames

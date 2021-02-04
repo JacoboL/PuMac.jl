@@ -32,6 +32,8 @@ unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool =
 ```
 ### Ejemplo 
 Supongamos que tenemos dos archivos csv, si el primero contiene el siguiente DataFrame
+
+`Archivo_1.csv`
 ```julia
 4×2 DataFrame
  Row │ A        B      
@@ -43,6 +45,8 @@ Supongamos que tenemos dos archivos csv, si el primero contiene el siguiente Dat
    4 │ 4        M      
 ```
 Y el segundo archivo contiene este otro DataFrame
+
+`Archivo_2.csv`
 ```julia   
 6×2 DataFrame
  Row │ C        D      

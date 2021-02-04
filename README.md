@@ -26,7 +26,7 @@ using PuMac
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
-Une `columnas::Array` de `archivos::Array`
+Une las `columnas` de los `archivos`
 
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)

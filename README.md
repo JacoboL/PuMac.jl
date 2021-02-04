@@ -26,15 +26,15 @@ using PuMac
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
->Une las `columnas` de los `archivos`
+Une las `columnas` de los `archivos`
 
 ```julia
 unir(carpeta::String, columnas::Array, nombre_archivo::String, faltantes::Bool = true)
 ```
-### Ejemplo 
-Supongamos que tenemos dos archivos csv, que contengan DataFrames
-
-`Archivo_1.csv`
+>### Ejemplo 
+>Supongamos que tenemos dos archivos csv, que contengan DataFrames
+>
+>`Archivo_1.csv`
 ```julia
 4×2 DataFrame
  Row │ A        B      

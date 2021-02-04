@@ -24,6 +24,8 @@ using PuMac
 ```
 ### Unir()
 
+#### recive archivos csv y columnas desadas y exporta un archivo de tipo csv o jld 
+
 ```julia
 unir(archivos::Array, columnas::Array)
 ```
